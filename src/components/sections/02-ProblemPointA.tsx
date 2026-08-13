@@ -1,5 +1,6 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ShoppingBag, Target } from "lucide-react";
 import Container from "@/components/ui/Container";
+import CTAButton from "@/components/ui/CTAButton";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -56,6 +57,26 @@ export default function ProblemPointA() {
             </AnimatedSection>
           ))}
         </div>
+
+        <AnimatedSection delay={0.4}>
+          <p className="mt-14 text-sm font-semibold uppercase tracking-[0.15em] text-wine/70">
+            ¿Qué vendés?
+          </p>
+          <div className="mt-3 flex flex-col gap-4 sm:flex-row">
+            <CTAButton href="#metodo-libre" className="gap-2.5">
+              <ShoppingBag className="h-5 w-5" strokeWidth={2} />
+              Vendo productos
+            </CTAButton>
+            <CTAButton
+              href="#metodo-impacto"
+              variant="outline"
+              className="gap-2.5"
+            >
+              <Target className="h-5 w-5" strokeWidth={2} />
+              Vendo servicios
+            </CTAButton>
+          </div>
+        </AnimatedSection>
       </Container>
     </section>
   );

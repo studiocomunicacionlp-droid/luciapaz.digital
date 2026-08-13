@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { ShoppingBag, Target } from "lucide-react";
 import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { withBasePath } from "@/lib/utils";
+import { WHATSAPP_MESSAGES, whatsappLink } from "@/lib/whatsapp";
 
 export default function Hero() {
   return (
@@ -48,21 +48,9 @@ export default function Hero() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.3}>
-            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.15em] text-rose-light/80">
-              ¿Qué vendés?
-            </p>
-            <div className="mt-3 flex flex-col gap-4 sm:flex-row">
-              <CTAButton href="#metodo-libre" className="gap-2.5">
-                <ShoppingBag className="h-5 w-5" strokeWidth={2} />
-                Vendo productos
-              </CTAButton>
-              <CTAButton
-                href="#metodo-impacto"
-                variant="outline"
-                className="gap-2.5 border-cream/40 text-cream hover:bg-cream hover:text-wine"
-              >
-                <Target className="h-5 w-5" strokeWidth={2} />
-                Vendo servicios
+            <div className="mt-9">
+              <CTAButton href={whatsappLink(WHATSAPP_MESSAGES.hero)}>
+                Estoy lista, quiero empezar
               </CTAButton>
             </div>
           </AnimatedSection>

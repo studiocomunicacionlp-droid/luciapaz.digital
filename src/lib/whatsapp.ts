@@ -5,7 +5,7 @@ export function whatsappLink(message: string) {
 }
 
 export const WHATSAPP_MESSAGES = {
-  hero: "Hola Lucía! Quiero aplicar a uno de los 5 cupos de lanzamiento 💕",
+  hero: "Hola Lucía! Estoy lista, quiero empezar 💕",
   final: "Hola Lucía! Quiero ser una de las 5. Contame cómo seguimos.",
   general: "Hola Lucía! Vengo de tu landing y quiero saber más sobre Método Libre / Método Impacto.",
   libre: "Hola Lucía! Quiero armar mi tienda online con el Método Libre 🛍️",
