@@ -20,7 +20,7 @@ const LIBRE_INCLUDES = [
   "Diagnóstico de tu venta actual",
   "Implementación de tu tienda a medida",
   "Manual de criterio",
-  "3 videos tutoriales: cómo cargar productos, cómo modificar el diseño, cómo conectar el medio de pago",
+  "3 videos tutoriales: cargar productos, modificar el diseño, conectar el medio de pago",
   "1 mes de acompañamiento por WhatsApp para dudas de uso (horario laboral, 9 a 18hs)",
 ];
 
@@ -97,13 +97,13 @@ export default function Method() {
                 </p>
                 <div>
                   <p className="font-heading text-xl font-extrabold text-wine">
-                    $250.000
+                    $250.000 <span className="text-sm font-semibold text-wine/60">ARS</span>
                   </p>
                   <p className="text-xs text-ink/60">Hasta 10 productos</p>
                 </div>
                 <div>
                   <p className="font-heading text-xl font-extrabold text-wine">
-                    $330.000
+                    $330.000 <span className="text-sm font-semibold text-wine/60">ARS</span>
                   </p>
                   <p className="text-xs text-ink/60">Hasta 30 productos</p>
                 </div>
@@ -150,7 +150,7 @@ export default function Method() {
                 </p>
                 <div>
                   <p className="font-heading text-xl font-extrabold text-cream">
-                    $180.000
+                    $180.000 <span className="text-sm font-semibold text-cream/60">ARS</span>
                   </p>
                 </div>
                 <CTAButton

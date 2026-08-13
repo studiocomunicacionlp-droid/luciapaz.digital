@@ -3,6 +3,7 @@ import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { WHATSAPP_MESSAGES, whatsappLink } from "@/lib/whatsapp";
+import { CUPOS_DISPONIBLES } from "@/lib/launch";
 
 const INCLUDES = [
   "Tienda online o landing a medida (Método Libre o Método Impacto)",
@@ -51,10 +52,12 @@ export default function OfferSummary() {
                 <p className="font-heading text-lg font-bold text-wine">
                   Precio de lanzamiento
                 </p>
-                <p className="text-sm text-ink/60">Cupos: 5</p>
+                <p className="text-sm text-ink/60">
+                  Cupos: {CUPOS_DISPONIBLES}
+                </p>
               </div>
               <CTAButton href={whatsappLink(WHATSAPP_MESSAGES.final)}>
-                Quiero mi web
+                Quiero empezar
               </CTAButton>
             </div>
           </AnimatedSection>

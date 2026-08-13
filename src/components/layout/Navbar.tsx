@@ -16,7 +16,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="rounded-full bg-wine px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-rose-strong sm:px-5 sm:py-2.5"
         >
-          Quiero mi web
+          Quiero empezar
         </a>
       </Container>
     </header>

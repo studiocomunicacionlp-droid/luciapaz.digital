@@ -76,6 +76,10 @@ export default function ProblemPointA() {
               Vendo servicios
             </CTAButton>
           </div>
+          <p className="mt-4 text-sm text-ink/60">
+            Vos no tocás una línea de código. Yo me encargo de todo lo
+            técnico.
+          </p>
         </AnimatedSection>
       </Container>
     </section>

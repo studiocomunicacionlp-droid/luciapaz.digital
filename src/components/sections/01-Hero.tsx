@@ -7,13 +7,14 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { withBasePath } from "@/lib/utils";
 import { WHATSAPP_MESSAGES, whatsappLink } from "@/lib/whatsapp";
+import { CUPOS_DISPONIBLES } from "@/lib/launch";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pb-16 pt-14 text-cream sm:pt-20">
       <Image
         src={withBasePath("/images/lucia-1.jpg")}
-        alt="Lucía Paz"
+        alt="Lucía Paz trabajando en su notebook"
         fill
         priority
         className="object-cover object-[50%_75%]"
@@ -26,7 +27,7 @@ export default function Hero() {
         <div className="max-w-xl">
           <AnimatedSection>
             <Eyebrow className="bg-cream/10 text-rose-light">
-              Lanzamiento · solo 5 cupos
+              Lanzamiento · solo {CUPOS_DISPONIBLES} cupos
             </Eyebrow>
           </AnimatedSection>
 

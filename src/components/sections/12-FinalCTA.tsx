@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { WHATSAPP_MESSAGES, whatsappLink } from "@/lib/whatsapp";
+import { CUPOS_DISPONIBLES } from "@/lib/launch";
 
 export default function FinalCTA() {
   return (
@@ -30,7 +31,7 @@ export default function FinalCTA() {
               variant="dark"
               className="bg-cream !text-wine hover:bg-rose-light px-10 py-5 text-lg"
             >
-              Quiero ser una de las 5
+              Quiero ser una de las {CUPOS_DISPONIBLES}
             </CTAButton>
           </div>
         </AnimatedSection>

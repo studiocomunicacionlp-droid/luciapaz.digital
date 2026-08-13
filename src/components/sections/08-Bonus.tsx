@@ -1,6 +1,7 @@
 import { Gift } from "lucide-react";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { CUPOS_DISPONIBLES } from "@/lib/launch";
 
 export default function Bonus() {
   return (
@@ -21,8 +22,8 @@ export default function Bonus() {
                 <p className="mt-2 max-w-xl text-balance text-cream/90">
                   Mini-set de plantillas de Canva (posts e historias) para
                   anunciar tu nueva tienda o landing en redes desde el día 1.
-                  Exclusivo para las 5 clientas de esta edición de
-                  lanzamiento.
+                  Exclusivo para las {CUPOS_DISPONIBLES} clientas de esta
+                  edición de lanzamiento.
                 </p>
               </div>
             </div>

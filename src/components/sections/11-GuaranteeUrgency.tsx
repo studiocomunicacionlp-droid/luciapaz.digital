@@ -1,6 +1,12 @@
 import { ShieldCheck, Timer } from "lucide-react";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import {
+  CUPOS_DISPONIBLES,
+  CUPOS_OCUPADOS,
+  FECHA_CIERRE,
+  TOTAL_CUPOS,
+} from "@/lib/launch";
 
 export default function GuaranteeUrgency() {
   return (
@@ -14,8 +20,35 @@ export default function GuaranteeUrgency() {
             </h3>
             <p className="text-cream/75">
               Precio de lanzamiento, solo{" "}
-              <span className="font-semibold text-rose-light">5 cupos</span>.
+              <span className="font-semibold text-rose-light">
+                {CUPOS_DISPONIBLES} cupos
+              </span>
+              {FECHA_CIERRE && (
+                <>
+                  {" "}
+                  · cierra el{" "}
+                  <span className="font-semibold text-rose-light">
+                    {FECHA_CIERRE}
+                  </span>
+                </>
+              )}
+              .
             </p>
+            {CUPOS_OCUPADOS > 0 && (
+              <div>
+                <div className="h-2 w-full overflow-hidden rounded-full bg-cream/10">
+                  <div
+                    className="h-full rounded-full bg-rose-strong"
+                    style={{
+                      width: `${(CUPOS_OCUPADOS / TOTAL_CUPOS) * 100}%`,
+                    }}
+                  />
+                </div>
+                <p className="mt-2 text-sm text-cream/60">
+                  {CUPOS_OCUPADOS} de {TOTAL_CUPOS} cupos ya ocupados
+                </p>
+              </div>
+            )}
           </div>
         </AnimatedSection>
 

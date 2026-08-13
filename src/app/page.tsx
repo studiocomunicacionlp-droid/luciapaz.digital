@@ -13,6 +13,7 @@ import Bonus from "@/components/sections/08-Bonus";
 import SocialProof from "@/components/sections/09-SocialProof";
 import About from "@/components/sections/10-About";
 import GuaranteeUrgency from "@/components/sections/11-GuaranteeUrgency";
+import FAQ from "@/components/sections/11a-FAQ";
 import FinalCTA from "@/components/sections/12-FinalCTA";
 import OfferSummary from "@/components/sections/13-OfferSummary";
 
@@ -32,6 +33,7 @@ export default function Home() {
       <SocialProof />
       <About />
       <GuaranteeUrgency />
+      <FAQ />
       <FinalCTA />
       <OfferSummary />
       <Footer />
