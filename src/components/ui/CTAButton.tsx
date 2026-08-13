@@ -23,11 +23,12 @@ export default function CTAButton({
     dark: "bg-ink text-cream hover:bg-rose-strong hover:-translate-y-0.5",
   };
 
+  const isAnchor = href.startsWith("#");
+
   return (
     <Link
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(!isAnchor && { target: "_blank", rel: "noopener noreferrer" })}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-center font-heading text-base font-semibold transition-all duration-300",
         styles[variant],

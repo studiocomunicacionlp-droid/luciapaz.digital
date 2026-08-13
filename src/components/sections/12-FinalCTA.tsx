@@ -11,9 +11,16 @@ export default function FinalCTA() {
       <Container className="relative">
         <AnimatedSection>
           <h2 className="mx-auto max-w-2xl text-balance font-heading text-3xl font-extrabold leading-tight sm:text-5xl">
-            Tu negocio ya vende. Ahora hacé que venda sin vos pegada al
-            celular.
+            ¿Estás lista para vender sin estar pegada al celular y volver
+            a ser dueña de tu tiempo?
           </h2>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.1}>
+          <p className="mx-auto mt-5 max-w-xl text-balance text-lg text-cream/85 sm:text-xl">
+            Dejá de perseguir cada mensaje. Es hora de que tu negocio venda
+            por vos.
+          </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.15}>

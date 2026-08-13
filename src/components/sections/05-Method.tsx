@@ -66,7 +66,10 @@ export default function Method() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-stretch">
           <AnimatedSection direction="left" delay={0.15}>
-            <div className="flex h-full flex-col gap-5 rounded-3xl border-2 border-rose bg-rose-light/40 p-7">
+            <div
+              id="metodo-libre"
+              className="flex h-full scroll-mt-24 flex-col gap-5 rounded-3xl border-2 border-rose bg-rose-light/40 p-7"
+            >
               <ShoppingBag className="h-8 w-8 text-rose-strong" strokeWidth={1.75} />
               <div>
                 <h3 className="font-heading text-xl font-bold text-wine">
@@ -115,7 +118,10 @@ export default function Method() {
           </AnimatedSection>
 
           <AnimatedSection direction="right" delay={0.2}>
-            <div className="flex h-full flex-col gap-5 rounded-3xl border-2 border-wine bg-wine p-7 text-cream">
+            <div
+              id="metodo-impacto"
+              className="flex h-full scroll-mt-24 flex-col gap-5 rounded-3xl border-2 border-wine bg-wine p-7 text-cream"
+            >
               <Target className="h-8 w-8 text-rose-light" strokeWidth={1.75} />
               <div>
                 <h3 className="font-heading text-xl font-bold">

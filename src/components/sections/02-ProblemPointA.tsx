@@ -14,7 +14,14 @@ export default function ProblemPointA() {
     <section className="bg-cream py-20 sm:py-28">
       <Container>
         <AnimatedSection>
-          <Eyebrow>¿Te suena conocido?</Eyebrow>
+          <Eyebrow>¿Te identificás?</Eyebrow>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.05}>
+          <p className="mt-5 max-w-2xl text-balance font-heading text-2xl font-bold text-ink sm:text-3xl">
+            No es que hagas algo mal. Es que tu negocio todavía depende
+            100% de vos.
+          </p>
         </AnimatedSection>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">

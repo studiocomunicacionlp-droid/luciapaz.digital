@@ -24,7 +24,7 @@ export default function WhyNotWorked() {
       <Container>
         <AnimatedSection>
           <Eyebrow className="bg-cream text-wine">
-            Por qué lo que hiciste hasta ahora no funcionó
+            Seguro hiciste esto y no te está funcionando
           </Eyebrow>
         </AnimatedSection>
 
