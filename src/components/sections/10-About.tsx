@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import PhotoFrame from "@/components/ui/PhotoFrame";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { withBasePath } from "@/lib/utils";
 
 export default function About() {
   return (
@@ -54,6 +56,27 @@ export default function About() {
               landing que armo tiene un poco de lo que me hubiese gustado
               tener cuando empecé.
             </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.35}>
+            <a
+              href={withBasePath("/images/certificado-tiendanube.jpg")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-3 rounded-2xl bg-cream/10 py-2.5 pl-3 pr-4 transition-colors hover:bg-cream/15"
+            >
+              <div className="relative h-6 w-[111px] shrink-0">
+                <Image
+                  src={withBasePath("/images/tiendanube-logo.png")}
+                  alt="Tiendanube"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-sm font-semibold text-cream/85 underline decoration-cream/30 underline-offset-4">
+                Partner certificada · ver certificado
+              </span>
+            </a>
           </AnimatedSection>
 
           <AnimatedSection delay={0.4}>
