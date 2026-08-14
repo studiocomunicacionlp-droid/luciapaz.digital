@@ -14,13 +14,18 @@ export default function TrustedBrands() {
         </AnimatedSection>
 
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {TRUSTED_BRANDS.map((brand, i) => (
-            <AnimatedSection key={brand} delay={i * 0.05}>
-              <div className="flex h-full items-center justify-center rounded-2xl border-2 border-rose-light bg-white px-4 py-6 text-center shadow-card">
+          {TRUSTED_BRANDS.map(({ name, url }, i) => (
+            <AnimatedSection key={name} delay={i * 0.05}>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-full items-center justify-center rounded-2xl border-2 border-rose-light bg-white px-4 py-6 text-center shadow-card transition-colors hover:border-rose-strong hover:bg-rose-light/20"
+              >
                 <span className="font-heading text-sm font-semibold text-wine">
-                  {brand}
+                  {name}
                 </span>
-              </div>
+              </a>
             </AnimatedSection>
           ))}
         </div>
