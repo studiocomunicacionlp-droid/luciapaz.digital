@@ -10,11 +10,6 @@ export const TRUSTED_BRANDS = [
     logo: "/images/brands/whitening-pro.png",
   },
   {
-    name: "Firmea",
-    url: "https://firmeaoficial.com/products/aceite-corporal-firmea",
-    logo: "/images/brands/firmea.png",
-  },
-  {
     name: "Snowberry",
     url: "https://snowberryarg2.mitiendanube.com/",
     logo: "/images/brands/snowberry.png",
