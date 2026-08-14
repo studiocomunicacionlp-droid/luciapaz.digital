@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { withBasePath } from "@/lib/utils";
 import { TRUSTED_BRANDS } from "@/lib/brands";
 
 export default function TrustedBrands() {
@@ -13,18 +15,22 @@ export default function TrustedBrands() {
           </div>
         </AnimatedSection>
 
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {TRUSTED_BRANDS.map(({ name, url }, i) => (
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {TRUSTED_BRANDS.map(({ name, url, logo }, i) => (
             <AnimatedSection key={name} delay={i * 0.05}>
               <a
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-full items-center justify-center rounded-2xl border-2 border-rose-light bg-white px-4 py-6 text-center shadow-card transition-colors hover:border-rose-strong hover:bg-rose-light/20"
+                aria-label={name}
+                className="relative flex h-24 items-center justify-center rounded-2xl border-2 border-rose-light bg-white px-5 py-4 shadow-card transition-colors hover:border-rose-strong"
               >
-                <span className="font-heading text-sm font-semibold text-wine">
-                  {name}
-                </span>
+                <Image
+                  src={withBasePath(logo)}
+                  alt={name}
+                  fill
+                  className="object-contain p-4"
+                />
               </a>
             </AnimatedSection>
           ))}
