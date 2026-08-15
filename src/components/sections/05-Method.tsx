@@ -1,14 +1,4 @@
-import {
-  ShoppingBag,
-  Target,
-  Check,
-  Phone,
-  ClipboardList,
-  Search,
-  Hammer,
-  PackageCheck,
-  Headset,
-} from "lucide-react";
+import { ShoppingBag, Target, Check } from "lucide-react";
 import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -38,15 +28,6 @@ const SHARED = [
   "Pago en cuotas: 50% al inicio, 50% a la entrega",
   "Cambios de diseño post-entrega quedan fuera del acompañamiento (solo dudas de uso)",
   "Bono de lanzamiento incluido: kit de arranque de contenido (plantillas de Canva)",
-];
-
-const PROCESS = [
-  { icon: Phone, label: "Llamada inicial" },
-  { icon: ClipboardList, label: "Formulario y relevamiento" },
-  { icon: Search, label: "Diagnóstico" },
-  { icon: Hammer, label: "Implementación" },
-  { icon: PackageCheck, label: "Entrega" },
-  { icon: Headset, label: "Acompañamiento de 1 mes" },
 ];
 
 export default function Method() {
@@ -189,27 +170,6 @@ export default function Method() {
             “Yo dejé de vender sola para construir algo que vende por mí. Hoy
             te ayudo a hacer lo mismo.”
           </p>
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.35}>
-          <div className="relative mt-16">
-            <div className="absolute left-[27px] top-2 bottom-2 w-0.5 bg-rose-light lg:left-0 lg:right-0 lg:top-7 lg:bottom-auto lg:h-0.5 lg:w-auto" />
-            <div className="relative flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-4">
-              {PROCESS.map(({ icon: Icon, label }, i) => (
-                <div
-                  key={label}
-                  className="relative flex items-center gap-4 lg:flex-1 lg:flex-col lg:items-center lg:gap-3 lg:text-center"
-                >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-cream bg-wine shadow-card">
-                    <Icon className="h-6 w-6 text-rose-light" strokeWidth={1.75} />
-                  </div>
-                  <p className="font-heading text-sm font-semibold text-ink/80 lg:max-w-[110px]">
-                    <span className="text-rose-strong">{i + 1}.</span> {label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </AnimatedSection>
       </Container>
     </section>

@@ -65,21 +65,21 @@ export default function SocialProof() {
             ref={scrollerRef}
             className="scrollbar-hide mt-10 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-6 pb-2 sm:px-0"
           >
-            {TESTIMONIALS.map((src) => (
+            {TESTIMONIALS.map((src, i) => (
               <div
                 key={src}
                 className="w-[240px] shrink-0 snap-start overflow-hidden rounded-2xl shadow-card sm:w-[280px]"
               >
                 <Image
                   src={withBasePath(src)}
-                  alt="Testimonio real de una clienta por WhatsApp"
+                  alt={`Testimonio ${i + 1} de ${TESTIMONIAL_COUNT}: captura real de WhatsApp de una clienta agradeciendo el trabajo`}
                   width={700}
                   height={500}
                   className="block h-auto w-full"
                 />
               </div>
             ))}
-            <div className="w-2 shrink-0 sm:hidden" aria-hidden="true" />
+            <div className="w-20 shrink-0 sm:hidden" aria-hidden="true" />
           </div>
         </AnimatedSection>
       </Container>

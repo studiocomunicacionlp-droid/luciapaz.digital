@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { ShieldCheck, Timer } from "lucide-react";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -5,10 +8,24 @@ import {
   CUPOS_DISPONIBLES,
   CUPOS_OCUPADOS,
   FECHA_CIERRE,
+  FECHA_CIERRE_ISO,
   TOTAL_CUPOS,
 } from "@/lib/launch";
 
 export default function GuaranteeUrgency() {
+  const [cierreVigente, setCierreVigente] = useState(true);
+
+  useEffect(() => {
+    if (!FECHA_CIERRE_ISO) {
+      setCierreVigente(false);
+      return;
+    }
+    const limite = new Date(`${FECHA_CIERRE_ISO}T23:59:59`);
+    setCierreVigente(new Date() <= limite);
+  }, []);
+
+  const mostrarFecha = FECHA_CIERRE && cierreVigente;
+
   return (
     <section className="bg-ink py-20 text-cream sm:py-28">
       <Container className="grid gap-8 md:grid-cols-2">
@@ -23,7 +40,7 @@ export default function GuaranteeUrgency() {
               <span className="font-semibold text-rose-light">
                 {CUPOS_DISPONIBLES} cupos
               </span>
-              {FECHA_CIERRE && (
+              {mostrarFecha && (
                 <>
                   {" "}
                   · cierra el{" "}

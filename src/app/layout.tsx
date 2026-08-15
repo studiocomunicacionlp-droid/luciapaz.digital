@@ -2,6 +2,21 @@ import type { Metadata } from "next";
 import { Poppins, Caveat } from "next/font/google";
 import "./globals.css";
 import { CUPOS_DISPONIBLES } from "@/lib/launch";
+import { INSTAGRAM_URL } from "@/lib/social";
+
+const SITE_URL = "https://studiocomunicacionlp-droid.github.io/luciapaz.digital/";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Lucía Paz",
+  description:
+    "Diseño de tiendas online y landings a medida para emprendedoras, Partner certificada de Tiendanube.",
+  url: SITE_URL,
+  image: `${SITE_URL}images/og-cover.jpg`,
+  areaServed: "AR",
+  sameAs: [INSTAGRAM_URL],
+};
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -54,7 +69,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${poppins.variable} ${caveat.variable} scroll-smooth`}>
-      <body className="antialiased font-heading bg-cream text-ink">{children}</body>
+      <body className="antialiased font-heading bg-cream text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
